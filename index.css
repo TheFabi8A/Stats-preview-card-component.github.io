@@ -102,7 +102,7 @@ body {
     font-size: 0.9em;
 }
 
-@media screen and (min-width: 890px) {
+@media screen and (min-width: 1024px) {
     body {
         height: 90vh;
     }
