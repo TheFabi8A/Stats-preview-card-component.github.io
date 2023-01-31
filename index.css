@@ -66,6 +66,7 @@ body {
     color: var(--mainheading-stats);
     font-family: Inter, sans-serif;
     font-size: 1.9em;
+    font-weight: bold;
 }
 
 .accent-text {
@@ -113,7 +114,7 @@ body {
     .card-contain {
         text-align: left;
         justify-content: start;
-        padding: 5.3em 8em 4em 4.6em;
+        padding: 5.3em 8em 4em 4em;
         max-width: 38em;
     }
 
@@ -135,7 +136,7 @@ body {
     }
 
     .stats-container {
-        padding-top: 5em;
+        padding-top: 4em;
         gap: 0;
         flex-direction: row;
         justify-content: space-between;
