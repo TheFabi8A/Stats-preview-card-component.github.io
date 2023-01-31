@@ -101,7 +101,7 @@ body {
     font-size: 0.9em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 890px) {
     body {
         height: 90vh;
     }
@@ -130,7 +130,7 @@ body {
         background: var(--accent) url("images/image-header-desktop.jpg") right / cover no-repeat;
         background-blend-mode: multiply;
         width: 36em;
-        height: 33em;
+        height: 29.73em;
         order: 5;
     }
 
