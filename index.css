@@ -1,11 +1,17 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-size: 15px;
     background-color: var(--main-background);
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.6em;
 }
 
 :root {
@@ -20,75 +26,49 @@ body {
 @font-face {
     font-family: Inter;
     src:
-        url("/fonts/Inter-Regular.woff2") format("woff2"),
-        url("/fonts/Inter-Regular.woff") format("woff"),
-        url("/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+        url("fonts/Inter-Regular.woff2") format("woff2"),
+        url("fonts/Inter-Regular.woff") format("woff"),
+        url("fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
 }
-
-/* Weights: 400, 700 */
 
 @font-face {
     font-family: Lexend-Deca;
     src:
-        url("/fonts/LexendDeca-Regular.woff2") format("woff2"),
-        url("/fonts/LexendDeca-Regular.woff") format("woff"),
-        url("/fonts/LexendDeca-VariableFont_wght.ttf") format("truetype");
+        url("fonts/LexendDeca-Regular.woff2") format("woff2"),
+        url("fonts/LexendDeca-Regular.woff") format("woff"),
+        url("fonts/LexendDeca-VariableFont_wght.ttf") format("truetype");
 }
 
-/* Weights: 400 */
-
-.container-absolute {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+.img-header {
+    background: var(--accent) url("images/image-header-mobile.jpg") top center / cover no-repeat;
+    background-blend-mode: multiply;
+    height: 15.86em;
 }
 
 .card-container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: column;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 0.7em;
     background-color: var(--card-background);
-}
-
-.card-image-container {
-    position: relative;
-    width: 350px;
-    height: 289px;
-    display: block;
-}
-
-.card-image {
-    width: inherit;
-}
-
-.background-img {
-    position: absolute;
-    background-color: var(--accent);
-    width: inherit;
-    height: inherit;
-    opacity: 0.5;
 }
 
 .card-contain {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    gap: 10px;
-    width: 350px;
-    margin: 10px;
+    flex-direction: column;
+    padding: 2.6em 2.3em;
+    max-width: 25em;
+    gap: 1.3em;
+    text-align: center;
 }
 
 .title {
     color: var(--mainheading-stats);
     font-family: Inter, sans-serif;
-    font-size: 1.75em;
+    font-size: 1.9em;
 }
 
-.color-main {
+.accent-text {
     color: var(--accent);
 }
 
@@ -100,8 +80,9 @@ body {
 .stats-container {
     font-family: Lexend-Deca, sans-serif;
     display: flex;
-    flex-flow: row nowrap;
-    gap: 20px;
+    flex-direction: column;
+    gap: 1.3em;
+    padding-top: 1.6em;
 }
 
 .stat {
@@ -109,44 +90,54 @@ body {
 }
 
 .number {
-    font-size: 1.5em;
     color: var(--mainheading-stats);
     display: block;
+    font-size: 1.65em;
 }
 
 .name {
-    font-size: 0.8em;
     color: var(--stats-headings);
     display: block;
+    font-size: 0.9em;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (min-width: 1024px) {
     body {
-        margin: 10px;
-    }
-
-    .container-absolute {
-        width: auto;
-        height: auto;
+        height: 90vh;
     }
 
     .card-container {
-        flex-flow: column nowrap;
-        width: 375px;
-    }
-
-    .card-image-container {
-        width: inherit;
-        height: 275px;
+        flex-direction: row;
     }
 
     .card-contain {
-        width: auto;
+        text-align: left;
+        justify-content: start;
+        padding: 5.3em 8em 4em 4.6em;
+        max-width: 38em;
+    }
+
+    .title {
+        font-size: 2.475em;
+    }
+
+    .description {
+        font-size: 1em;
+        width: 23em;
+    }
+
+    .img-header {
+        background: var(--accent) url("images/image-header-desktop.jpg") right / cover no-repeat;
+        background-blend-mode: multiply;
+        width: 36em;
+        height: 30em;
+        order: 5;
     }
 
     .stats-container {
-        flex-flow: column nowrap;
-        justify-content: center;
-        text-align: center;
+        padding-top: 5em;
+        gap: 0;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
