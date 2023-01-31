@@ -114,7 +114,7 @@ body {
     .card-contain {
         text-align: left;
         justify-content: start;
-        padding: 5.3em 8em 4em 4em;
+        padding: 5.3em 6em 4em 4em;
         max-width: 38em;
     }
 
@@ -136,6 +136,7 @@ body {
     }
 
     .stats-container {
+        width: 23.3em;
         padding-top: 4em;
         gap: 0;
         flex-direction: row;
